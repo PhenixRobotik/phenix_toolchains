@@ -41,8 +41,8 @@ nano /etc/default/hostapd
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 
 systemctl unmask hostapd
-systemctl start hostapd
-systemctl start dnsmasq
+systemctl enable hostapd
+systemctl enable dnsmasq
 
 on pc: #might be needed after each reboot #https://unix.stackexchange.com/questions/222054/how-can-i-use-linux-as-a-gateway
 echo 1 > /proc/sys/net/ipv4/ip_forward
